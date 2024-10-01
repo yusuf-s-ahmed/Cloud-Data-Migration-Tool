@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './App.css'; // Make sure to import your CSS file
 
 const MigrationForm = () => {
   const [mysqlConn, setMysqlConn] = useState('');
@@ -25,30 +26,32 @@ const MigrationForm = () => {
   };
 
   return (
-    <div>
-      <h1>Cloud Database Migration Tool</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>MySQL Connection String:</label>
+    <div className="migration-container">
+      <h1 className="migration-title">Cloud Database Migration Tool</h1>
+      <form className="migration-form" onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label className="form-label">MySQL Connection String:</label>
           <input
             type="text"
+            className="form-input"
             value={mysqlConn}
             onChange={(e) => setMysqlConn(e.target.value)}
             required
           />
         </div>
-        <div>
-          <label>MongoDB Connection String:</label>
+        <div className="form-group">
+          <label className="form-label">MongoDB Connection String:</label>
           <input
             type="text"
+            className="form-input"
             value={mongoConn}
             onChange={(e) => setMongoConn(e.target.value)}
             required
           />
         </div>
-        <button type="submit">Migrate Data</button>
+        <button type="submit" className="form-button">Migrate Data</button>
       </form>
-      {message && <p>{message}</p>}
+      {message && <p className="migration-message">{message}</p>}
     </div>
   );
 };
