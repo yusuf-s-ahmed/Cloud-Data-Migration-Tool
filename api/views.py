@@ -66,3 +66,4 @@ def migrate_data(request):
         return Response({"error": f"MySQL Error: {str(db_err)}"}, status=500)
     except Exception as e:
         return Response({"error": str(e)}, status=500)
+    
