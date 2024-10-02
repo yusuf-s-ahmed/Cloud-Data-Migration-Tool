@@ -5,7 +5,8 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background: linear-gradient(to top, #f7feff, #f5f5f5); /* Example gradient */
+  z-index: 1;
 }
 
 body {
@@ -18,31 +19,28 @@ body {
   display: flex; /* Use flexbox */
   flex-direction: column; /* Stack items vertically */
   align-items: center; /* Center items horizontally */
-  margin-top: 20px; /* Adjust this value if needed */
+  margin-top: 10px; /* Reduced margin */
 }
-
-
-
-
 
 .migration-title {
   text-align: center;
   color: #333;
-  margin-bottom: 20px; /* Keep or adjust */
-  font-size: 1.5rem;
+  margin-bottom: 20px; /* Reduced bottom margin */
+  margin-top: 5px; /* Shift the title up slightly */
+  font-size: 1.3rem;
   font-weight: 600;
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 10px; /* Reduced bottom margin */
   text-align: left; /* Align labels to the left */
 }
 
 .form-label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 9px; /* Reduced margin */
   color: #333;
-  font-size: 0.97rem;
+  font-size: 0.88rem;
 }
 
 .form-input {
@@ -68,8 +66,8 @@ body {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 5px; /* Reduced margin */
+  margin-bottom: 15px; /* Reduced margin */
 }
 
 .form-button:hover {
@@ -81,98 +79,60 @@ body {
   color: #007bff;
 }
 
-
-
-
-
-
 .connecting-text {
   font-size: 1rem; /* Adjust font size as needed */
   color: #333; /* Change color if needed */
-  margin: 0 20px; /* Add horizontal spacing */
+  margin: 0 30px; /* Reduced horizontal spacing */
 }
-
 
 .image-container {
   display: flex; /* Use flexbox for layout */
   justify-content: center; /* Center the images horizontally */
   align-items: center; /* Center vertically */
-  margin: 20px 0; /* Keep this for spacing above and below the images */
-  margin-top: 25px; /* Optional: Adjust top margin if needed */
-  margin-bottom: 52px; /* Use negative margin to shift the container up */
-  margin-left: 7px;
+  margin: 10px 0; /* Reduced margin */
+  margin: -45px 0 15px; /* Shift up slightly */
 }
-
 
 .migration-container {
-  max-width: 370px;
+  max-width: 490px;
   width: 100%;
   background-color: white;
-  padding: 20px;
+  padding: 15px; /* Reduced padding */
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  margin-top: 20px; /* Adjust margin if necessary */
-}
-
-.migration-image {
-  width: 670px; /* Set a fixed width */
-  margin-bottom: -350px; /* Adjust this negative margin to pull the form closer, reduce it to lower the cloud image */
-  margin-top: -390px; /* Decrease this value to move the cloud image up (make it less negative) */
-  opacity: 0.4; /* Set opacity to 50% */
-  transition: opacity none; /* Add a transition for smooth effect */
-  z-index: 1;
-  pointer-events: none;
+  margin-top: 7px; /* Reduced margin */
 }
 
 .image-container img {
   width: 100px; /* Set a fixed width for the logos */
   height: auto; /* Maintain the aspect ratio */
-  margin: 5px 20px; /* Add horizontal spacing between the logos */
+  margin: 0 5px; /* Reduced horizontal spacing */
 }
-
-
 
 #mysql.mysql {
   width: 70px; /* Adjust this value */
   height: auto; /* Maintain aspect ratio */
 }
 
-
-
-
-.image-container {
-  display: flex; /* Use flexbox for layout */
-  justify-content: center; /* Center the images horizontally */
-  align-items: center; /* Center vertically */
-  margin: 25px 0; /* Unified margin above and below the images */
-  margin-left: 15px; /* Shift the entire container to the right */
-}
-
-.image-container img {
-  width: 100px; /* Set a fixed width for the logos */
-  height: auto; /* Maintain the aspect ratio */
-  margin: 0 5px; /* Adjust horizontal spacing for all logos */
-}
-
 .logo-container {
   display: flex; /* Use flexbox to align logo and check mark */
   flex-direction: column; /* Stack them vertically */
   align-items: center; /* Center them horizontally */
-  margin: 0 10px; /* Optional: Add horizontal spacing */
+  margin: 0 60px; /* Optional: Add horizontal spacing */
 }
 
 .logo-container:last-child .check-mark {
-  margin-top: 10px; /* Reduce space for MongoDB checkmark */
+  margin-top: 5px; /* Reduced space for MongoDB checkmark */
 }
 
 /* Specific margin adjustments for MySQL */
 #check1 {
-  margin-top: 10px; /* Increase space for MySQL checkmark */
+  margin-top: 5px; /* Reduced space for MySQL checkmark */
 }
 
 /* Specific margin adjustments for MongoDB */
 #check2 {
-  margin-top: -7px; /* Reduce space for MongoDB checkmark */
+  margin-top: -5px; /* Reduce space for MongoDB checkmark */
 }
 
 /* General checkmark styling */
@@ -193,3 +153,539 @@ body {
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle shadow */
 }
 
+.cloud-container {
+  position: relative;
+  display: flex; /* Flexbox for better alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-top: -340px; /* Reduce this to move the entire cloud container up */
+  margin-bottom: -340px; /* Reduced bottom margin */
+  pointer-events: none;
+  z-index: 2;
+}
+
+.migration-image {
+  width: 100%; /* Adjust this to control cloud size */
+  max-width: 700px; /* Set a max width to control image size */
+  height: auto; /* Maintain aspect ratio */
+  opacity: 0.3; /* Set opacity */
+  transition: opacity none; /* Add a transition for smooth effect */
+  z-index: 0; /* Set z-index to a lower value to place behind text */
+  pointer-events: none; /* Prevent pointer events */
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%; /* Adjust this value for vertical positioning */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text */
+  text-align: center;
+  color: #007bff; /* Hero text color */
+  max-width: 80%; /* Limit width to prevent overflow */
+  white-space: nowrap; /* Prevent text from wrapping */
+  font-weight: 100;
+  pointer-events: none;
+}
+
+.hero-title {
+  font-size: 3rem; /* Adjust font size as needed */
+  margin: 0; /* Remove default margin */
+  font-weight: 520;
+  text-shadow: 0.5px 0.5px 0.3px rgba(0, 0, 0, 0.5);
+  pointer-events: none; /* Adjusted shadow for better visibility */
+}
+
+.hero-subtext {
+  color: #333; /* Hero subtext color */
+  font-size: 1.2rem; /* Reduced font size */
+  margin: 10px 0 0; /* Reduced top margin */
+  pointer-events: none;
+}
+
+.navbar {
+  position: absolute; /* Position the navbar absolutely */
+  top: -25px; /* Adjust this value to move it up or down */
+  left: 50%; /* Align it with the center */
+  transform: translateX(-50%); /* Center the navbar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 60px; /* Add side padding for more space */
+  
+  z-index: 1; /* Ensure it appears above other content */
+  white-space: nowrap; /* Prevent wrapping of the navbar items */
+  border-radius: 7px;
+}
+
+.app-container {
+  position: relative; /* Keep this to allow absolute positioning */
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+}
+
+.vertical-line {
+  width: 1px; /* Width of the line */
+  height: 30px; /* Height of the line */
+  background-color: #007bff; /* Color of the line */
+  margin: 0 27px; /* Reduced spacing around the line */
+}
+
+.navbar-icons {
+  display: flex;
+  gap: 25px; /* Reduced spacing between icons */
+}
+
+/* App.css */
+.created-by {
+  color: #007bff; /* Set text color to blue */
+  font-size: 16px; /* Optional: adjust font size */
+  font-weight: 400; /* Optional: make it bold */
+}
+
+.usage-guide {
+  color: #333; /* Set text color */
+  font-size: 14px; /* Adjust font size */
+  margin-top: 40px;
+  margin-bottom: -60px; /* Reduced space above */
+  text-align: center; /* Center the text */
+}
+
+.link {
+  color: #007bff; /* Link color */
+  text-decoration: underline; /* Underline the link */
+}
+
+.link:hover {
+  color: #0056b3; /* Change link color on hover */
+}
+
+
+
+
+
+
+
+.help-icon {
+  position: relative;
+  cursor: pointer; /* Show cursor pointer on hover */
+}
+
+.circle {
+  width: 20px; /* Adjust as needed */
+  height: 20px; /* Adjust as needed */
+  border: 1.5px solid #007bff; /* Blue outline */
+  border-radius: 50%; /* Circle shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto; /* Align to the right */
+}
+
+.question-mark {
+  color: #007bff; /* Blue color for the question mark */
+  font-size: 16px; /* Adjust size as needed */
+  font-weight: 600;
+}
+
+.usage-guide-tooltip {
+  position: absolute;
+  top: 20px; /* Adjust to position tooltip above the circle */
+  left: 20px; /* Adjust to position tooltip away from circle */
+  background: white; /* White background for the tooltip */
+  border: 1px solid #007bff; /* Border matching the circle */
+  padding: 10px;
+  border-radius: 4px; /* Slightly round corners */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
+  width: 150px; /* Set a fixed width (adjust as needed) */
+}
+
+
+.migration-header {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  margin-bottom: 20px; /* Add space below the header */
+}
+
+.migration-title {
+  margin: 0; /* Remove default margin */
+  margin-right: 10px; /* Add space between title and question mark */
+  font-size: 24px; /* Adjust font size if needed */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive media queries */
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.8rem; }
+  .hero-subtext { font-size: 1.14rem; }
+  .migration-container { max-width: 70%; }
+  .form-input { width: 94%; }
+  .image-container img { width: 83px; }
+  .image-container {
+    margin: -18px 0 20px; /* Adjust to move it up slightly */
+  }
+  .migration-title { font-size: 1.2rem; }
+  .form-label { font-size: 0.89rem; }
+  #mysql.mysql { width: 55px; margin-top: 10px; }
+  .cloud-container {
+    width: 90%; /* Reduce the width */
+    height: auto; /* Maintain the aspect ratio */
+    margin: -315px auto; /* Use a negative top margin to move it up, and auto for left/right centering */
+  }
+  .connecting-text { font-size: 0.9rem; }
+  .check-mark { margin-top: 15px; }
+  .form-button { padding: 10px; margin-top: 20px; }
+  .navbar {
+    position: fixed; /* Fixes the navbar to the top starting from this breakpoint */
+    top: 0; /* Aligns the navbar to the top of the viewport */
+    z-index: 1000; /* Keeps the navbar on top of other content */
+    padding: 8px 20px; /* Slightly reduced padding */
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+    width: 100%; /* Full width */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    text-align: center; /* Center text within items */
+  }
+  .usage-guide-tooltip {
+    top: 30px; /* Adjust to position tooltip above the circle */
+    left: -60px; /* Adjust to position tooltip away from circle */
+    width: 150px; /* Set a fixed width (adjust as needed) */
+  }
+}
+
+
+
+
+
+
+.tick-container {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center ticks horizontally */
+  margin-top: 10px; /* Space between status and ticks */
+  opacity: 0; /* Initial opacity */
+  transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+
+.tick {
+  color: green; /* Tick color */
+  font-size: 2rem; /* Adjust size of ticks */
+  margin: 0 5px; /* Spacing between ticks */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 650px) {
+  .hero-title { font-size: 2.4rem; }
+  .hero-subtext { font-size: 0.9rem; }
+  .migration-container { max-width: 58%; }
+  .form-input { width: 90%; }
+  .image-container img { width: 79px; }
+  .image-container {
+    margin: 19px 0 29px; /* Adjust to move it up slightly */
+  }
+  .migration-title { font-size: 1.3rem; }
+  .form-label { font-size: 0.8rem; }
+  #mysql.mysql { width: 50px; margin-top: 8px; }
+  .cloud-container {
+    width: 86%; /* Reduce the width */
+    height: auto; /* Maintain the aspect ratio */
+    margin: -310px auto; /* Use a negative top margin to move it up, and auto for left/right centering */
+  }
+  .connecting-text { font-size: 0.7rem; }
+  .check-mark { margin-top: 13px; }
+  .form-button { padding: 9px; margin-top: 18px; }
+  .navbar {
+    position: fixed; /* Fixes the navbar to the top starting from this breakpoint */
+    top: 0; /* Aligns the navbar to the top of the viewport */
+    z-index: 1000; /* Keeps the navbar on top of other content */
+    padding: 7px 17px; /* Slightly reduced padding */
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    width: 100%; /* Full width */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    text-align: center; /* Center text within items */
+  }
+  .usage-guide {
+    font-size: 0.7rem; /* Adjust font size */
+  }
+
+
+  .usage-guide-tooltip {
+    top: 30px; /* Adjust to position tooltip above the circle */
+    left: -130px; /* Adjust to position tooltip away from circle */
+    width: 150px; /* Set a fixed width (adjust as needed) */
+  }
+
+  .image-container img {
+    width: 100px; /* Set a fixed width for the logos */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 0 -15px; /* Reduced horizontal spacing */
+  }
+}
+
+
+@media (max-width: 590px) {
+  .hero-title { font-size: 2.2rem; }
+  .hero-subtext { font-size: 0.74rem; }
+  .migration-container { max-width: 58%; }
+  .form-input { width: 90%; }
+  .image-container img { width: 79px; }
+  .image-container {
+    margin: 20px 0 50px; /* Adjust to move it up slightly */
+  }
+  .migration-title { font-size: 1.1rem; }
+  .form-label { font-size: 0.69rem; }
+  #mysql.mysql { width: 50px; margin-top: 8px; }
+  .cloud-container {
+    width: 86%; /* Reduce the width */
+    height: auto; /* Maintain the aspect ratio */
+    margin: -270px auto; /* Use a negative top margin to move it up, and auto for left/right centering */
+  }
+  .connecting-text { font-size: 0.7rem; }
+  .check-mark { margin-top: 13px; }
+  .form-button { padding: 9px; margin-top: 18px; }
+  .navbar {
+    position: fixed; /* Fixes the navbar to the top starting from this breakpoint */
+    top: 0; /* Aligns the navbar to the top of the viewport */
+    z-index: 1000; /* Keeps the navbar on top of other content */
+    padding: 7px 17px; /* Slightly reduced padding */
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    width: 100%; /* Full width */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    text-align: center; /* Center text within items */
+  }
+
+  .usage-guide-tooltip {
+    top: 30px; /* Adjust to position tooltip above the circle */
+    left: -130px; /* Adjust to position tooltip away from circle */
+    width: 150px; /* Set a fixed width (adjust as needed) */
+    font-size: 0.8rem;
+  }
+
+  .image-container img {
+    width: 100px; /* Set a fixed width for the logos */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 0 -24px; /* Reduced horizontal spacing */
+  }
+
+}
+
+
+
+
+@media (max-width: 500px) {
+  .hero-title { font-size: 1.9rem; }
+  .hero-subtext { font-size: 0.73rem; }
+  .migration-container { max-width: 58%; }
+  .form-input { width: 90%; }
+  .image-container img { width: 79px; }
+  .image-container {
+    margin: 40px 0 55px; /* Adjust to move it up slightly */
+  }
+  .migration-title { font-size: 0.9rem; }
+  .form-label { font-size: 0.6rem; }
+  #mysql.mysql { width: 50px; margin-top: 8px; }
+  .cloud-container {
+    width: 86%; /* Reduce the width */
+    height: auto; /* Maintain the aspect ratio */
+    margin: -240px auto; /* Use a negative top margin to move it up, and auto for left/right centering */
+  }
+  .connecting-text { font-size: 0.7rem; }
+  .check-mark { margin-top: 13px; }
+  .form-button { padding: 9px; margin-top: 18px; }
+  .navbar {
+    position: fixed; /* Fixes the navbar to the top starting from this breakpoint */
+    top: 0; /* Aligns the navbar to the top of the viewport */
+    z-index: 1000; /* Keeps the navbar on top of other content */
+    padding: 7px 17px; /* Slightly reduced padding */
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    width: 100%; /* Full width */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    text-align: center; /* Center text within items */
+  }
+  .usage-guide-tooltip {
+    top: 30px; /* Adjust to position tooltip above the circle */
+    left: -130px; /* Adjust to position tooltip away from circle */
+    width: 150px; /* Set a fixed width (adjust as needed) */
+    font-size: 0.7rem;
+  }
+
+  .image-container img {
+    width: 100px; /* Set a fixed width for the logos */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 0 -39px; /* Reduced horizontal spacing */
+  }
+
+}
+
+
+@media (max-width: 450px) {
+  .hero-title { font-size: 1.8rem; }
+  .hero-subtext { font-size: 0.65rem; }
+  .migration-container { max-width: 58%; }
+  .form-input { width: 90%; }
+  .image-container img { width: 79px; }
+  .image-container {
+    margin: 60px 0 62px; /* Adjust to move it up slightly */
+  }
+  .migration-title { font-size: 0.85rem; }
+  .form-label { font-size: 0.62rem; }
+  #mysql.mysql { width: 50px; margin-top: 8px; }
+  .cloud-container {
+    width: 86%; /* Reduce the width */
+    height: auto; /* Maintain the aspect ratio */
+    margin: -220px auto; /* Use a negative top margin to move it up, and auto for left/right centering */
+  }
+  .connecting-text { font-size: 0.7rem; }
+  .check-mark { margin-top: 13px; }
+  .form-button { padding: 9px; margin-top: 18px; }
+  .navbar {
+    position: fixed; /* Fixes the navbar to the top starting from this breakpoint */
+    top: 0; /* Aligns the navbar to the top of the viewport */
+    z-index: 1000; /* Keeps the navbar on top of other content */
+    padding: 7px 17px; /* Slightly reduced padding */
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    width: 100%; /* Full width */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    text-align: center; /* Center text within items */
+  }
+
+  .usage-guide-tooltip {
+    top: 30px; /* Adjust to position tooltip above the circle */
+    left: -130px; /* Adjust to position tooltip away from circle */
+    width: 150px; /* Set a fixed width (adjust as needed) */
+    font-size: 0.65rem;
+  }
+
+}
+
+
+@media (max-width: 400px) {
+  .hero-title { font-size: 1.6rem; }
+  .hero-subtext { font-size: 0.6rem; }
+  .migration-container { max-width: 58%; }
+  .form-input { width: 90%; }
+  .image-container img { width: 79px; }
+  .image-container {
+    margin: 50px 0 50px; /* Adjust to move it up slightly */
+  }
+  .migration-title { font-size: 0.75rem; }
+  .form-label { font-size: 0.62rem; }
+  #mysql.mysql { width: 50px; margin-top: 8px; }
+  .cloud-container {
+    width: 86%; /* Reduce the width */
+    height: auto; /* Maintain the aspect ratio */
+    margin: -190px auto; /* Use a negative top margin to move it up, and auto for left/right centering */
+  }
+  .connecting-text { font-size: 0.7rem; }
+  .check-mark { margin-top: 13px; }
+  .form-button { padding: 9px; margin-top: 18px; }
+  .navbar {
+    position: fixed; /* Fixes the navbar to the top starting from this breakpoint */
+    top: 0; /* Aligns the navbar to the top of the viewport */
+    z-index: 1000; /* Keeps the navbar on top of other content */
+    padding: 7px 17px; /* Slightly reduced padding */
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
+    width: 100%; /* Full width */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    text-align: center; /* Center text within items */
+  }
+
+  .usage-guide-tooltip {
+    top: 30px; /* Adjust to position tooltip above the circle */
+    left: -130px; /* Adjust to position tooltip away from circle */
+    width: 150px; /* Set a fixed width (adjust as needed) */
+    font-size: 0.63rem;
+  }
+}
+
+
+@media (max-width: 380px) {
+  .hero-title { font-size: 1.5rem; }
+  .hero-subtext { font-size: 0.61rem; }
+  .migration-container { max-width: 58%; }
+  .form-input { width: 90%; }
+  .image-container img { width: 79px; }
+  .image-container {
+    margin: -27px 0 17px; /* Adjust to move it up slightly */
+  }
+  .migration-title { font-size: 0.7rem; }
+  .form-label { font-size: 0.59rem; }
+  #mysql.mysql { width: 50px; margin-top: 8px; }
+  .cloud-container {
+    width: 86%; /* Reduce the width */
+    height: auto; /* Maintain the aspect ratio */
+    margin: -155px auto; /* Use a negative top margin to move it up, and auto for left/right centering */
+  }
+  .connecting-text { font-size: 0.7rem; }
+  .check-mark { margin-top: 13px; }
+  .form-button { padding: 9px; margin-top: 18px; }
+  .navbar {
+    position: fixed; /* Fixes the navbar to the top starting from this breakpoint */
+    top: 0; /* Aligns the navbar to the top of the viewport */
+    z-index: 1000; /* Keeps the navbar on top of other content */
+    padding: 7px 17px; /* Slightly reduced padding */
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
+    width: 100%; /* Full width */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    text-align: center; /* Center text within items */
+  }
+
+  .usage-guide-tooltip {
+    top: 30px; /* Adjust to position tooltip above the circle */
+    left: -130px; /* Adjust to position tooltip away from circle */
+    width: 150px; /* Set a fixed width (adjust as needed) */
+    font-size: 0.61rem;
+  }
+}
