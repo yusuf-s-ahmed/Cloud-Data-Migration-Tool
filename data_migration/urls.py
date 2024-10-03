@@ -16,11 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from api.views import getData, migrate_data
+from api.views import migrate_data
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('api.urls')),
-    path('getdata/', getData, name='get_data'),  # Add this line for the getData endpoint
     path('migrate/', migrate_data, name='migrate_data'),  # Ensure the migrate_data route is also defined
 ]

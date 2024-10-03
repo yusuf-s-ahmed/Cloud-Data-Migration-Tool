@@ -2,7 +2,7 @@ import mysql.connector
 from pymongo import MongoClient
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from urllib.parse import urlparse
+from urllib.parse import urlparse, parse_qs
 from django.shortcuts import render
 
 
@@ -17,10 +17,22 @@ def parse_mysql_conn_string(conn_string):
         'port': result.port or 3306,   # Default to 3306 if no port is provided
     }
 
-@api_view(['GET'])
-def getData(request):
-    person = {'name': 'Yusuf', 'Age': 20}
-    return Response(person)
+def parse_mongo_conn_string(conn_string):
+    """Parse the MongoDB connection string and return parameters."""
+    result = urlparse(conn_string)
+    db_name = result.path[1:]  # Remove the leading '/'
+    
+    # Handle connection string options
+    options = parse_qs(result.query)
+    
+    return {
+        'host': result.hostname,
+        'user': result.username,
+        'password': result.password,
+        'database': db_name,
+        'options': options,  # Store query options for later use
+        'is_srv': conn_string.startswith('mongodb+srv://')  # Check for SRV
+    }
 
 @api_view(['POST'])
 def migrate_data(request):
@@ -51,10 +63,19 @@ def migrate_data(request):
                 rows = mysql_cursor.fetchall()
                 column_names = [i[0] for i in mysql_cursor.description]
 
+        # Parse MongoDB connection string
+        mongo_params = parse_mongo_conn_string(mongo_conn_str)
+
         # Connect to MongoDB
-        mongo_client = MongoClient(mongo_conn_str)
-        mongo_db_name = urlparse(mongo_conn_str).path[1:]  # Remove leading '/'
-        mongo_collection = mongo_client[mongo_db_name][mongo_collection_name]
+        if mongo_params['is_srv']:
+            # Use SRV connection
+            mongo_client = MongoClient(mongo_conn_str)
+        else:
+            # Regular connection
+            mongo_uri = f"mongodb://{mongo_params['user']}:{mongo_params['password']}@{mongo_params['host']}/{mongo_params['database']}"
+            mongo_client = MongoClient(mongo_uri)
+
+        mongo_collection = mongo_client[mongo_params['database']][mongo_collection_name]
 
         # Convert rows to documents
         documents = [{column_names[i]: row[i] for i in range(len(row))} for row in rows]
@@ -66,4 +87,3 @@ def migrate_data(request):
         return Response({"error": f"MySQL Error: {str(db_err)}"}, status=500)
     except Exception as e:
         return Response({"error": str(e)}, status=500)
-    
