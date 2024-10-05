@@ -23,6 +23,8 @@
             border: 1px solid #ccc;
             padding: 5px;
             border-radius: 4px;
+            display: block; /* Make code blocks full width */
+            margin: 5px 0; /* Add margin for spacing */
         }
         .sample-data {
             background-color: #e0f7fa; /* Light Cyan */
@@ -50,7 +52,6 @@
 </ul>
 
 <h3 id="sample-data">Sample Data for Testing</h3>
-
 <div class="sample-data">
     <h4>MySQL Connection String:</h4>
     <code>mysql://z1h1d3cc8n3zxyyf:hbtrqrmda6lvwqrs@tuy8t6uuvh43khkk.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/thveh2bl4keq8cz9</code>
