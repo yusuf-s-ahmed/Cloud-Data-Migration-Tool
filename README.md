@@ -1,42 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud-based SQL to NoSQL Data Migration Tool</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-        h1, h2, h3, h4 {
-            color: #333;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        code {
-            background-color: #e8e8e8;
-            border: 1px solid #ccc;
-            padding: 5px;
-            border-radius: 4px;
-            display: block; /* Make code blocks full width */
-            margin: 5px 0; /* Add margin for spacing */
-        }
-        .sample-data {
-            background-color: #e0f7fa; /* Light Cyan */
-            border: 1px solid #00695c; /* Teal Border */
-            padding: 15px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-    </style>
-</head>
-<body>
-
 <h1>Cloud-based SQL to NoSQL Data Migration Tool</h1>
 
 <p>This tool facilitates seamless data migration from a MySQL database to a MongoDB database, providing a cloud-based solution for developers and businesses looking to leverage NoSQL databases.</p>
@@ -52,19 +13,20 @@
 </ul>
 
 <h3 id="sample-data">Sample Data for Testing</h3>
-<div class="sample-data">
-    <h4>MySQL Connection String:</h4>
-    <code>mysql://z1h1d3cc8n3zxyyf:hbtrqrmda6lvwqrs@tuy8t6uuvh43khkk.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/thveh2bl4keq8cz9</code>
 
-    <h4>MongoDB Connection String:</h4>
-    <code>mongodb+srv://mongodbtestconnection:MongoDB123@cluster0.n3edv.mongodb.net/mongodbtestconnection?retryWrites=true&w=majority&appName=Cluster0</code>
+<p>Use the following connection strings and table/collection names to test the migration tool:</p>
 
-    <h4>MySQL Table Name:</h4>
-    <code>users</code>
+<h4>MySQL Connection String:</h4>
+<code>mysql://z1h1d3cc8n3zxyyf:hbtrqrmda6lvwqrs@tuy8t6uuvh43khkk.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/thveh2bl4keq8cz9</code>
 
-    <h4>MongoDB Collection Name:</h4>
-    <code>mongodbtestcollection</code>
-</div>
+<h4>MongoDB Connection String:</h4>
+<code>mongodb+srv://mongodbtestconnection:MongoDB123@cluster0.n3edv.mongodb.net/mongodbtestconnection?retryWrites=true&w=majority&appName=Cluster0</code>
+
+<h4>MySQL Table Name:</h4>
+<code>users</code>
+
+<h4>MongoDB Collection Name:</h4>
+<code>mongodbtestcollection</code>
 
 <h3 id="features">Features</h3>
 <ul>
@@ -106,6 +68,3 @@
 <p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
 
 <p>For any questions or issues, please open an issue on GitHub or contact the maintainer.</p>
-
-</body>
-</html>
