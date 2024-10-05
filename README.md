@@ -2,16 +2,16 @@
 
 <p>This tool facilitates seamless data migration from a MySQL database to a MongoDB database, providing a cloud-based solution for developers and businesses looking to leverage NoSQL databases.</p>
 
-<p>Access the tool here: http://16.171.5.222</p>
+<p>Access the tool here: <a href="http://16.171.5.222" target="_blank">http://16.171.5.222</a></p>
 
 <h2>Table of Contents</h2>
 <ul>
-    <li><a href="#sample-data">Sample Data for Testing</a></li>
-    <li><a href="#features">Features</a></li>
-    <li><a href="#installation">Installation</a></li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
+    <li><a href="#sample-data" target="_blank">Sample Data for Testing</a></li>
+    <li><a href="#features" target="_blank">Features</a></li>
+    <li><a href="#installation" target="_blank">Installation</a></li>
+    <li><a href="#usage" target="_blank">Usage</a></li>
+    <li><a href="#contributing" target="_blank">Contributing</a></li>
+    <li><a href="#license" target="_blank">License</a></li>
 </ul>
 
 <h3 id="sample-data">Sample Data for Testing</h3>
@@ -67,6 +67,6 @@
 </ol>
 
 <h3 id="license">License</h3>
-<p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
+<p>This project is licensed under the MIT License - see the <a href="LICENSE" target="_blank">LICENSE</a> file for details.</p>
 
 <p>For any questions or issues, please open an issue on GitHub or contact the maintainer.</p>
