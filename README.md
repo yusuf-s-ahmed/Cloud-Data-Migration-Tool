@@ -1,6 +1,6 @@
 <h1>Cloud Backup, Recovery & Replication Tool</h1>
 
-<p>This tool facilitates seamless data migration from a MySQL database to a MongoDB database, providing a cloud-based solution for developers and businesses looking to leverage NoSQL databases.</p>
+<p>A cross-platform solution for real-time data backup and replication between MySQL and MongoDB on AWS, Azure, and other cloud platforms. Features secure RESTful APIs and high-performance automation to minimise downtime and manual intervention.</p>
 
 <h2>Table of Contents</h2>
 <ul>
