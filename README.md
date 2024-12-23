@@ -47,7 +47,7 @@
 </ol>
 
 <h3 id="usage">Usage</h3>
-<p>1. To run the migration tool, follow the link to the tool</p>
+<p>1. To run the migration tool, follow the link to the tool.</p>
 <p>2. Follow the prompts to enter your MySQL and MongoDB connection strings and select the tables/collections you want to migrate.</p>
 <p>3. Then click migrate.</p>
 
