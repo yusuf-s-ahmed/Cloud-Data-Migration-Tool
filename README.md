@@ -47,9 +47,9 @@
 </ol>
 
 <h3 id="usage">Usage</h3>
-<p>To run the migration tool, execute the following command:</p>
-<pre><code>python migrate.py</code></pre>
+<p>To run the migration tool, follow the link to the tool</p>
 <p>Follow the prompts to enter your MySQL and MongoDB connection strings and select the tables/collections you want to migrate.</p>
+<p>Then click migrate</p>
 
 <h3 id="contributing">Contributing</h3>
 <p>If you would like to contribute to this project, please follow these steps:</p>
