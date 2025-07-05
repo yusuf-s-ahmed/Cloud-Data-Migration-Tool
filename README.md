@@ -1,4 +1,4 @@
-# Cloud Database Backup & Replication Tool Using Python, SQL, Django, FastAPI, and React
+# Cloud Database Backup & Replication Tool
 
 Inspired by my databases coursework at university, I developed a Cloud-Based SQL to NoSQL Data Migration Tool to simplify and automate the transfer of data from MySQL databases to MongoDB. This project addresses common migration challenges by offering a scalable solution that minimises downtime and preserves data integrity.
 
